@@ -1,49 +1,49 @@
-const mario = document.getElementById('mario')
-const turtle= document.getElementById('turtle')
-const button = document.querySelector('.start')
+a = 5;
+console.log(a);
+var leftBorderWidth = 1;
+let second = 2;
+const pi = 3.14;
 
-let isStart = false
-let interval
+console.log(leftBorderWidth);
 
-const activeJump = () => {
-    if(isStart) {
-        if(!mario.classList.contains('active')) {
-            mario.classList.add('active')
-            }
-           
-            setTimeout(()=>{
-                mario.classList.remove('active')
-            },300)
-    } 
-}
+let person = {
+    name1: "John",
+    age: 25,
+    isMarried: false
+};
 
-const startGame = () => {
-    isStart = true
-    turtle.classList.add('animate')
-    
-    interval = setInterval(()=> {
-    let marioTop = parseInt(window.getComputedStyle(mario).getPropertyValue('top'))
-    let turtleLeft = parseInt(window.getComputedStyle(turtle).getPropertyValue('left'))
+console.log(person.name1);
 
-    if (turtleLeft< 50 && turtleLeft > 0 && marioTop >= 140) {
-        endGame()
-    }
 
-    },10)
-}
+let arr = ['apple','orange','pear']
 
-const endGame = () => {
-    isStart = false
-    clearInterval(interval)
+console.log(arr[0])
+ 
+//let answer = prompt('Чи є вам 18?','Да');
+//console.log(typeof(null));
 
-    turtle.classList.remove('animate')
+//console.log("")
 
-    alert('GAME OVER!')
 
-}
 
-document.addEventListener('keydown',activeJump) 
+//alert('Hello world!')
 
-button.addEventListener('click', ( ) => {
-    startGame()
-})
+//let answer = confirm('Are you here?')
+
+//console.log(answer);
+
+let incr = 10,
+    decr = 10;
+
+console.log(incr++);
+console.log(decr-- );
+
+console.log(5%2);
+console.log("2" === 2);
+
+let isChecked = true,
+    isClosed = true;
+
+console.log(isChecked || !isClosed);
+
+
